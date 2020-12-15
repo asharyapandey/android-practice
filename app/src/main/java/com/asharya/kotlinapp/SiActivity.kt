@@ -3,9 +3,7 @@ package com.asharya.kotlinapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 
 class SiActivity : AppCompatActivity() {
 
@@ -48,7 +46,7 @@ class SiActivity : AppCompatActivity() {
         val btnTest : Button = findViewById(R.id.btnTest)
 
         btnTest.setOnClickListener {
-            Intent(this, LayoutPractice::class.java).also {
+            Intent(this, MessageActivity::class.java).also {
                 startActivity(it)
             }
         }
@@ -60,6 +58,22 @@ class SiActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+        val btnImage: Button = findViewById(R.id.btnImage)
+
+        btnImage.setOnClickListener {
+            Intent(this, ImageActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        val spinner : Spinner = findViewById(R.id.spinner)
+
+        val customList = listOf("Apple", "Mango", "Orange")
+        val adapter = ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, customList)
+        spinner.adapter = adapter
+
 
     }
+
+    
 }

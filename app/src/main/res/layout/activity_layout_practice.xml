@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".LayoutPractice">
+    tools:context=".MessageActivity">
 
     <EditText
         android:layout_width="match_parent"
@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:ems="10000000"
         android:gravity="top"
         android:hint="Message" />
 

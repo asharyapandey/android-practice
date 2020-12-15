@@ -2,10 +2,10 @@ package com.asharya.kotlinapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,8 +24,21 @@ class MainActivity : AppCompatActivity() {
         tvResult = findViewById(R.id.tvResult)
 
         btnCalculate.setOnClickListener {
-            retrieve()
+            if (validate()) retrieve()
         }
+    }
+
+    private fun validate(): Boolean {
+        if (TextUtils.isEmpty(etOne.text)) {
+            etOne.error = "Please enter the first nubmer."
+            etOne.requestFocus()
+            return false
+        } else if (TextUtils.isEmpty(etTwo.text)) {
+            etTwo.error = "Please enter the second Number"
+            etTwo.requestFocus()
+            return false
+        }
+        return true
     }
 
     private fun retrieve() {

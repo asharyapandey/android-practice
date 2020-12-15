@@ -9,15 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp">
-        <activity android:name=".LayoutPractice"></activity>
-        <activity android:name=".RadioButtonActivity" />
-        <activity android:name=".SiActivity">
+        <activity android:name=".CalenderActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TimePickerActivity" />
+        <activity android:name=".DatePickerActivity">
+        </activity>
+        <activity android:name=".CalculateAlertActivity" />
+        <activity android:name=".AlertActivity" />
+        <activity android:name=".AutoCompleteActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".GridLayoutActivity" />
+        <activity android:name=".NestedLayoutActivity" />
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".RadioButtonActivity" />
+        <activity android:name=".SiActivity" />
         <activity android:name=".MainActivity" />
     </application>
 
